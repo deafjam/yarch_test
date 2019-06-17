@@ -1,0 +1,10 @@
+# Cocoapods
+Podfile.lock
+Pods/
+
+## Xcode
+*.xcbkptlist
+*.xcuserstate
+
+## User settings
+**/xcuserdata/

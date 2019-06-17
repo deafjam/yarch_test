@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="test_yarch" customModuleProvider="target">
+            <connections>
+                <outlet property="birthTextField" destination="6eB-Zb-fxR" id="nON-sL-gP2"/>
+                <outlet property="nameTextField" destination="O8N-Og-lBJ" id="80x-D3-thC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="3uB-cd-6bj"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="tFS-wP-FUc">
+                    <rect key="frame" x="115.5" y="369" width="183" height="168"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="введите имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O8N-Og-lBJ">
+                            <rect key="frame" x="0.0" y="0.0" width="183" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите дату рождения" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6eB-Zb-fxR">
+                            <rect key="frame" x="0.0" y="46" width="183" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uf4-4s-6SC">
+                            <rect key="frame" x="0.0" y="92" width="183" height="30"/>
+                            <state key="normal" title="Выбрать фото"/>
+                            <connections>
+                                <action selector="choosePhotoHandlerWithSender:" destination="-1" eventType="touchUpInside" id="ypi-WE-t8r"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8N-N5-ckc">
+                            <rect key="frame" x="0.0" y="138" width="183" height="30"/>
+                            <state key="normal" title="Сохранить"/>
+                            <connections>
+                                <action selector="saveProfileHandlerWithSender:" destination="-1" eventType="touchUpInside" id="eXj-O5-tlH"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZs-Nv-D7C">
+                    <rect key="frame" x="24" y="68" width="34" height="30"/>
+                    <state key="normal" title="Back"/>
+                    <connections>
+                        <action selector="forceBackButtonHandler:" destination="-1" eventType="touchUpInside" id="Jag-or-fjx"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="tFS-wP-FUc" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="9i6-MC-8yI"/>
+                <constraint firstItem="fZs-Nv-D7C" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="YO8-Hu-a22"/>
+                <constraint firstItem="tFS-wP-FUc" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="rGt-b2-mXr"/>
+                <constraint firstItem="fZs-Nv-D7C" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="yTW-T8-K0v"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>
